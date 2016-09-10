@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <sys/time.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 #define SIGNALS_TO_PERFORM 100000
 
