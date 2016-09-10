@@ -24,7 +24,7 @@ int main(int argc, char ** argv)
 	}
 	
 		
-	double total_time = (end.tv_sec - start.tv_sec) * 1000.0;
+	total_time = (end.tv_sec - start.tv_sec) * 1000.0;
    total_time += (end.tv_usec - start.tv_usec) / 1000.0;   
 
 	printf("Syscalls Performed: %d\n",i);
