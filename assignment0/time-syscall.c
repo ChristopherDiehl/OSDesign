@@ -1,6 +1,9 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <sys/time.h>
+#include <stdlib.h>
+
+
 #define SYSCALLS_TO_PERFORM 100000
 int main(int argc, char ** argv)
 {
