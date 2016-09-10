@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <sys/time.h>
 #include <stdlib.h>
-#include <unistd.h>
 
 #define SIGNALS_TO_PERFORM 100000
 
@@ -24,7 +23,7 @@ void handle_sigfpe(int signum)
 		}
 		
 		double total_time = end.tv_usec - start.tv_usec;
-		printf("Syscalls Performed: %d\n",signals_performed);
+		printf("Signal Performed: %d\n",signals_performed);
 		printf("Total Elapsed Time: %f ms\n",total_time);
 		printf("Average Time Per Signal: %f ms\n",total_time / SIGNALS_TO_PERFORM);
 		exit(-1);
