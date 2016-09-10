@@ -20,7 +20,7 @@ void handle_sigfpe(int signum)
 		printf("Syscalls Performed: %d\n",signals_performed);
 		printf("Total Elapsed Time: %f ms\n",total_time);
 		printf("Average Time Per Signal: %f ms\n",total_time / SIGNALS_TO_PERFORM);
-		exit(1);
+		exit(-1);
 	}
 
 }
