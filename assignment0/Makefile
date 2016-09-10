@@ -11,4 +11,4 @@ all:
 
 
 clean:
-	rm *.o $(EXECS)
+	rm $(EXECS)
