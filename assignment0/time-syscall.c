@@ -15,7 +15,10 @@ int main(int argc, char ** argv)
 	}
 
 	gettimeofday(&end,NULL);
-
+	if(end.tv_usec == 0 || start.tv_usec == 0) {
+		printf("gettimeofday failed\n");
+		exit(-1);
+	}
 	total_time = (end.tv_usec - start.tv_usec);
 
 

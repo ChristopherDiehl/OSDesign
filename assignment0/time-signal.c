@@ -16,6 +16,12 @@ void handle_sigfpe(int signum)
 	if(signals_performed == SIGNALS_TO_PERFORM)
 	{
 		gettimeofday(&end,NULL);
+
+		if(end.tv_usec == 0 || start.tv_usec == 0) {
+			printf("gettimeofday failed\n");
+			exit(-1);
+		}
+		
 		double total_time = end.tv_usec - start.tv_usec;
 		printf("Syscalls Performed: %d\n",signals_performed);
 		printf("Total Elapsed Time: %f ms\n",total_time);
@@ -33,6 +39,8 @@ int main(int argc, char **argv)
 
 	signal(SIGFPE, handle_sigfpe);
 	z = x / y; 
+
+	z++;
 
 	return 1;
 }
