@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -g -Wall -o
 DEPS = 
 OBJECTS =
-EXECS = time-syscall
+EXECS = time-syscall time-signal
 
 all:
 	$(CC) $(CFLAGS) time-syscall time-syscall.c $(OBJECTS) 
