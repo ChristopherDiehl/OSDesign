@@ -22,7 +22,9 @@ void handle_sigfpe(int signum)
 			exit(-1);
 		}
 		
-		double total_time = end.tv_usec - start.tv_usec;
+		double total_time = (end.tv_sec - start.tv_sec) * 1000.0;
+    	total_time += (end.tv_usec - start.tv_usec) / 1000.0;   
+
 		printf("Signal Performed: %d\n",signals_performed);
 		printf("Total Elapsed Time: %f ms\n",total_time);
 		printf("Average Time Per Signal: %f ms\n",total_time / SIGNALS_TO_PERFORM);
